@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ot7w87d1e52v"
-path="res://.godot/imported/ThorIdles.png-1b1cbaa31317825a3295f797a06aa865.ctex"
+uid="uid://dxoqnkiwmpuum"
+path="res://.godot/imported/Thor'sEnemyIdles.png-075570f21d481faa9c06d38cec39c539.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ThorIdles.png"
-dest_files=["res://.godot/imported/ThorIdles.png-1b1cbaa31317825a3295f797a06aa865.ctex"]
+source_file="res://assets/spritesheets/thor enemy/Thor'sEnemyIdles.png"
+dest_files=["res://.godot/imported/Thor'sEnemyIdles.png-075570f21d481faa9c06d38cec39c539.ctex"]
 
 [params]
 

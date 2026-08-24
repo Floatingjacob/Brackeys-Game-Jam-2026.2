@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddw524r5hukms"]
 
 [ext_resource type="Script" uid="uid://cu8vgfoe8x5bs" path="res://scripts/characters/thor/thor.gd" id="1_cxac6"]
-[ext_resource type="Texture2D" uid="uid://ot7w87d1e52v" path="res://ThorIdles.png" id="1_iv386"]
+[ext_resource type="Texture2D" uid="uid://ot7w87d1e52v" path="res://assets/spritesheets/thor/ThorIdles.png" id="1_iv386"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxac6"]
 atlas = ExtResource("1_iv386")
@@ -151,7 +151,7 @@ script = ExtResource("1_cxac6")
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1305542990]
 sprite_frames = SubResource("SpriteFrames_ynlpw")
 animation = &"IdleUp"
-frame_progress = 0.22036116
+frame_progress = 0.8448441
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1832148129]
 position = Vector2(0, 2)
