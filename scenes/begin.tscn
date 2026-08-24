@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dknealtwddg3y"]
+
+[ext_resource type="PackedScene" uid="uid://ddw524r5hukms" path="res://reusables/characters/thor.tscn" id="1_bd4eo"]
+
+[node name="Node2D" type="Node2D" unique_id=152219880]
+
+[node name="Thor" parent="." unique_id=695716267 instance=ExtResource("1_bd4eo")]
+position = Vector2(492, 220)

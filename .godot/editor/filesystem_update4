@@ -1,0 +1,3 @@
+res://reusables/characters/thor.tscn
+res://scripts/characters/thor/thor.gd
+res://scenes/begin.tscn
