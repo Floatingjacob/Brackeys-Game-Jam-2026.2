@@ -1,2 +1,0 @@
-﻿49636
-D:/Godot Stuff/Engine/Godot_v4.7.1-stable_mono_win64.exe
