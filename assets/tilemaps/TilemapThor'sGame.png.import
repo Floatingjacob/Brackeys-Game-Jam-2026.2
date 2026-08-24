@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6ejirsn66ae5"
-path="res://.godot/imported/TilemapThor'sGame.png-0d36b6a69b51e42f839f4769b90e3d3c.ctex"
+path="res://.godot/imported/TilemapThor'sGame.png-aaaf9cd8e9f7040818bc6b7b171e42ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilemapThor'sGame.png"
-dest_files=["res://.godot/imported/TilemapThor'sGame.png-0d36b6a69b51e42f839f4769b90e3d3c.ctex"]
+source_file="res://assets/tilemaps/TilemapThor'sGame.png"
+dest_files=["res://.godot/imported/TilemapThor'sGame.png-aaaf9cd8e9f7040818bc6b7b171e42ea.ctex"]
 
 [params]
 

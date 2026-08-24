@@ -2,8 +2,21 @@ extends CharacterBody2D
 const SPEED = 300.0
 const MovementSnap: Vector2 = Vector2(16, 16)
 
-var directionalDirection := Vector2(0, 0)
+var directionalDirection := Vector2(1, 1)
 var lastDirectionalDirectionAxis := 1 # 1 = x, 0 = y
+
+@export_category("Camera Settings")
+
+@export var TopLimit:int = -10000000
+@export var BottomLimit:int = 10000000
+@export var RightLimit:int = 10000000
+@export var LeftLimit:int = -10000000
+
+func _ready() -> void:
+	$Camera.limit_top = TopLimit
+	$Camera.limit_bottom = BottomLimit
+	$Camera.limit_right = RightLimit
+	$Camera.limit_left = LeftLimit
 
 func _physics_process(_delta: float) -> void:
 	var direction := Vector2(Input.get_axis("ui_left", "ui_right"), Input.get_axis("ui_up", "ui_down"))

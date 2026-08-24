@@ -149,10 +149,14 @@ scale = Vector2(4, 4)
 script = ExtResource("1_cxac6")
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1305542990]
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_ynlpw")
 animation = &"IdleUp"
 frame_progress = 0.8448441
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1832148129]
-position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_ynlpw")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1858921459]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
