@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dknealtwddg3y"]
 
 [ext_resource type="PackedScene" uid="uid://ddw524r5hukms" path="res://reusables/characters/thor.tscn" id="1_bd4eo"]
-[ext_resource type="Texture2D" uid="uid://6ejirsn66ae5" path="res://TilemapThor'sGame.png" id="2_c2vp5"]
+[ext_resource type="Texture2D" uid="uid://6ejirsn66ae5" path="res://assets/tilemaps/TilemapThor'sGame.png" id="2_c2vp5"]
+[ext_resource type="PackedScene" uid="uid://dyrua1stavmxi" path="res://scenes/enemy.tscn" id="3_k81wc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k81wc"]
 texture = ExtResource("2_c2vp5")
@@ -49,3 +50,9 @@ scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_2bnyp")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 65536, 1, 1, 0, 0, 2, 0, 0, 3, 65536, 1, 4, 0, 0, 5, 0, 0, 65536, 65536, 0, 65537, 65536, 0, 65538, 65536, 0, 65539, 65536, 0, 65540, 65536, 0, 65541, 65536, 0, 131072, 65536, 0, 196608, 0, 1, 131073, 65536, 0, 196609, 0, 1, 131074, 65536, 0, 196610, 0, 1, 131075, 65536, 0, 196611, 0, 1, 131076, 65536, 0, 196612, 0, 1, 131077, 65536, 0, 196613, 0, 1)
+
+[node name="Enemy" parent="." unique_id=448632925 groups=["Enemy"] instance=ExtResource("3_k81wc")]
+position = Vector2(369, 45)
+
+[node name="Enemy2" parent="." unique_id=181559095 groups=["Enemy"] instance=ExtResource("3_k81wc")]
+position = Vector2(369, 76)

@@ -23,6 +23,12 @@ func _physics_process(_delta: float) -> void:
 			global_position = target_position
 			moving = false
 
+			# Player has finished moving, so every enemy gets one turn.
+			var enemies := get_tree().get_nodes_in_group("Enemy")
+
+			for enemy in enemies:
+				enemy.take_turn()
+
 		return
 
 	# Only accept a new button press when standing still.
