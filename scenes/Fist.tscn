@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dgwwfb6l4o3eg"]
+
+[ext_resource type="Script" uid="uid://blpmjcji226cf" path="res://scenes/fist.gd" id="1_2dubo"]
+[ext_resource type="Texture2D" uid="uid://bo8dkfk1801mc" path="res://assets/spritesheets/thor/Fist.png" id="1_5urjb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bnyp"]
+
+[node name="Fist" type="Area2D" unique_id=1022350186 groups=["Fist"]]
+script = ExtResource("1_2dubo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=160650934]
+texture = ExtResource("1_5urjb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1019895802]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_2bnyp")

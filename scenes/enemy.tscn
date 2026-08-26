@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cgv77q76vaa7p" path="res://scenes/enemy.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://dxoqnkiwmpuum" path="res://assets/spritesheets/thor enemy/Thor'sEnemyIdles.png" id="2_4ra3w"]
+[ext_resource type="Script" uid="uid://douqsg8xtwxu6" path="res://scenes/kill_zone.gd" id="3_4ra3w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fk37g"]
 atlas = ExtResource("2_4ra3w")
@@ -129,7 +130,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikt4i"]
 size = Vector2(19, 21)
 
-[node name="Enemy" type="CharacterBody2D" unique_id=448632925]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bnyp"]
+size = Vector2(19, 21)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=448632925 groups=["Enemy"]]
 script = ExtResource("1_md0e3")
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1961050365]
@@ -139,3 +143,10 @@ animation = &"IdleSide"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879738330]
 position = Vector2(-0.5, 2.5)
 shape = SubResource("RectangleShape2D_ikt4i")
+
+[node name="KillZone" type="Area2D" parent="." unique_id=810970374]
+script = ExtResource("3_4ra3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=2072037802]
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_2bnyp")

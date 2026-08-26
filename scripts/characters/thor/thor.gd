@@ -2,6 +2,16 @@ extends CharacterBody2D
 
 const TILE_SIZE := 32
 
+#Fist Spawners
+@onready var down_spawner: Node2D = $DownSpawner
+@onready var left_spawner: Node2D = $LeftSpawner
+@onready var right_spawner: Node2D = $RightSpawner
+@onready var up_spawner: Node2D = $UpSpawner
+
+var is_attacking := false
+#Fist Scene
+var fist_scene: PackedScene = preload("res://scenes/Fist.tscn")
+
 # Map boundaries in pixels
 const LEFT_BOUNDARY := 368.0
 const RIGHT_BOUNDARY := 16.0
@@ -15,6 +25,21 @@ var last_direction := Vector2.DOWN
 
 
 func _physics_process(_delta: float) -> void:
+#Look for Attack
+	if Input.is_action_just_pressed("attack") and not is_attacking:
+		is_attacking = true
+
+		attack()
+
+		var enemies := get_tree().get_nodes_in_group("Enemy")
+
+		for enemy in enemies:
+			enemy.take_turn()
+
+		await get_tree().create_timer(1.6).timeout
+
+		is_attacking = false
+#Movement Code
 	if moving:
 		# Move toward the next tile.
 		global_position = global_position.move_toward(target_position, 8.0)
@@ -71,3 +96,25 @@ func _physics_process(_delta: float) -> void:
 		if is_in_boundaries:
 			target_position = next_position
 			moving = true
+
+#Function attack
+func attack() -> void:
+	var spawner: Node2D
+
+	match last_direction:
+		Vector2.DOWN:
+			spawner = down_spawner
+		Vector2.LEFT:
+			spawner = left_spawner
+		Vector2.RIGHT:
+			spawner = right_spawner
+		Vector2.UP:
+			spawner = up_spawner
+
+	# Wait before spawning the fist.
+	await get_tree().create_timer(0.1).timeout
+
+	var fist_instance := fist_scene.instantiate()
+	get_parent().add_child(fist_instance)
+
+	fist_instance.global_position = spawner.global_position
